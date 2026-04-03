@@ -29,7 +29,7 @@ const NoteList = ({ note }: NoteListProps) => {
           <div className={css.footer}>
             <span className={css.tag}>{notes.tag}</span>
             <Link className={css.link} href={`/notes/${notes.id}`}>
-              View Details
+              View details
             </Link>
             <button
               className={css.button}
