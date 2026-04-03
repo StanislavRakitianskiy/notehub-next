@@ -11,7 +11,7 @@ import NoteList from "@/components/NoteList/NoteList";
 import SearchBox from "@/components/SearchBox/SearchBox";
 import css from "./page.module.css";
 
-const NoteDetails = () => {
+const NoteClient = () => {
   const [searchValue, setSearchValue] = useState<string>("");
   const [topic, setTopic] = useState<string>("");
   const [page, setPage] = useState<number>(1);
@@ -68,4 +68,4 @@ const NoteDetails = () => {
     </div>
   );
 };
-export default NoteDetails;
+export default NoteClient;

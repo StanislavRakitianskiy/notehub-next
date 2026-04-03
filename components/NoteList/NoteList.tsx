@@ -1,6 +1,7 @@
 import type { Note } from "@/types/note";
 import { deleteNote } from "@/lib/api";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import Link from "next/link";
 import css from "./NoteList.module.css";
 
 interface NoteListProps {
@@ -27,6 +28,9 @@ const NoteList = ({ note }: NoteListProps) => {
           <p className={css.content}>{notes.content}</p>
           <div className={css.footer}>
             <span className={css.tag}>{notes.tag}</span>
+            <Link className={css.link} href={`/notes/${notes.id}`}>
+              View Details
+            </Link>
             <button
               className={css.button}
               onClick={() => handleDelete(notes.id)}

@@ -48,3 +48,11 @@ export const deleteNote = async (id: string): Promise<Note> => {
   });
   return res.data;
 };
+export const fetchNoteById = async (id: string): Promise<Note> => {
+  const res = await axios.get<Note>(baseUrl + `/${id}`, {
+    headers: {
+      Authorization: `Bearer ${tmdbToken}`,
+    },
+  });
+  return res.data;
+};
